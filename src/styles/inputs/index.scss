@@ -1,0 +1,142 @@
+.input {
+  width: calc(100% - 20px);
+  height: 48px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+
+  &:focus {
+    background-color: #3A3C4C;
+    color: white;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: white;
+  }
+
+  &:focus::-ms-input-placeholder {
+    color: white;
+  }
+
+  &:focus::placeholder {
+    color: white;
+  }
+}
+.orderForm__rangeInput {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  border: 1px solid white;
+  box-sizing: border-box;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: $Blue_color;
+    cursor: pointer;
+    border: 2px solid #286690;
+    box-sizing: border-box;
+  }
+
+  &::-moz-range-thumb {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: $Blue_color;
+    cursor: pointer;
+    border: 2px solid #286690;
+    box-sizing: border-box;
+  }
+}
+.inputFile {
+  position: relative;
+  height: 48px;
+  cursor: pointer;
+  @media (max-width: 992px) {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  &__btn {
+    text-align: center;
+    text-transform: uppercase;
+    color: #272733;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 3px;
+    border: 1px solid $Blue_color;
+    cursor: pointer;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    max-width: 370px;
+    width: 370px;
+    height: 48px;
+    @media (max-width: 1210px) {
+      width: 300px;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__btn:before {
+    content: '';
+    width: 18px;
+    z-index: 123;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAxOCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjgxMjUgNC42MDg5OUwxMy4zMzA0IDEuMTI2ODVDMTIuOTE3NCAwLjcxMzkwMiAxMi4wOTE1IDAuMzY3OTIgMTEuNSAwLjM2NzkySDEuNTAwMDJDMC45MDg1IDAuMzY3OTIgMC40Mjg1ODkgMC44NDc4MzEgMC40Mjg1ODkgMS40MzkzNVYxOS4yOTY1QzAuNDI4NTg5IDE5Ljg4OCAwLjkwODUgMjAuMzY3OSAxLjUwMDAyIDIwLjM2NzlIMTYuNUMxNy4wOTE1IDIwLjM2NzkgMTcuNTcxNCAxOS44ODggMTcuNTcxNCAxOS4yOTY1VjYuNDM5MzVDMTcuNTcxNCA1Ljg0NzgzIDE3LjIyNTUgNS4wMjE5NCAxNi44MTI1IDQuNjA4OTlaTTExLjg1NzIgMS44ODU3OEMxMi4wNDY5IDEuOTUyNzQgMTIuMjM2NiAyLjA1MzE5IDEyLjMxNDggMi4xMzEzMUwxNS44MDgxIDUuNjI0NjJDMTUuODg2MiA1LjcwMjc0IDE1Ljk4NjYgNS44OTI0NyAxNi4wNTM2IDYuMDgyMjFIMTEuODU3MlYxLjg4NTc4Wk0xNi4xNDI5IDE4LjkzOTRIMS44NTcxNlYxLjc5NjQ5SDEwLjQyODZWNi40MzkzNUMxMC40Mjg2IDcuMDMwODcgMTAuOTA4NSA3LjUxMDc4IDExLjUgNy41MTA3OEgxNi4xNDI5VjE4LjkzOTRaTTQuNzE0MyA5LjI5NjQ5VjEwLjAxMDhDNC43MTQzIDEwLjIxMTcgNC44NzA1NSAxMC4zNjc5IDUuMDcxNDUgMTAuMzY3OUgxMi45Mjg2QzEzLjEyOTUgMTAuMzY3OSAxMy4yODU3IDEwLjIxMTcgMTMuMjg1NyAxMC4wMTA4VjkuMjk2NDlDMTMuMjg1NyA5LjA5NTYgMTMuMTI5NSA4LjkzOTM1IDEyLjkyODYgOC45MzkzNUg1LjA3MTQ1QzQuODcwNTUgOC45MzkzNSA0LjcxNDMgOS4wOTU2IDQuNzE0MyA5LjI5NjQ5Wk0xMi45Mjg2IDExLjc5NjVINS4wNzE0NUM0Ljg3MDU1IDExLjc5NjUgNC43MTQzIDExLjk1MjcgNC43MTQzIDEyLjE1MzZWMTIuODY3OUM0LjcxNDMgMTMuMDY4OCA0Ljg3MDU1IDEzLjIyNTEgNS4wNzE0NSAxMy4yMjUxSDEyLjkyODZDMTMuMTI5NSAxMy4yMjUxIDEzLjI4NTcgMTMuMDY4OCAxMy4yODU3IDEyLjg2NzlWMTIuMTUzNkMxMy4yODU3IDExLjk1MjcgMTMuMTI5NSAxMS43OTY1IDEyLjkyODYgMTEuNzk2NVpNMTIuOTI4NiAxNC42NTM2SDUuMDcxNDVDNC44NzA1NSAxNC42NTM2IDQuNzE0MyAxNC44MDk5IDQuNzE0MyAxNS4wMTA4VjE1LjcyNTFDNC43MTQzIDE1LjkyNiA0Ljg3MDU1IDE2LjA4MjIgNS4wNzE0NSAxNi4wODIySDEyLjkyODZDMTMuMTI5NSAxNi4wODIyIDEzLjI4NTcgMTUuOTI2IDEzLjI4NTcgMTUuNzI1MVYxNS4wMTA4QzEzLjI4NTcgMTQuODA5OSAxMy4xMjk1IDE0LjY1MzYgMTIuOTI4NiAxNC42NTM2WiIgZmlsbD0iIzI3MjczMyIvPgo8L3N2Zz4K");
+  }
+
+  &__hiddenInp {
+    opacity: 0;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 48px;
+    cursor: pointer;
+    @media (max-width: 1210px) {
+      width: 300px;
+    }
+  }
+}
+::-webkit-input-placeholder {
+  color: #272733;
+  font-size: 18px;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+:-ms-input-placeholder {
+  color: #272733;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: #272733;
+  font-size: 18px;
+}
