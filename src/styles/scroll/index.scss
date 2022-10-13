@@ -11,7 +11,7 @@
   height: 100vh;
   overflow: auto;
   position: relative;
-  scrollbar-width: none;
+  //scrollbar-width: none;
 }
 .ssb_sb {
   background-color: #3E9CDC;
@@ -44,7 +44,7 @@
   right: 3px;
 }
 ::-webkit-scrollbar {
-  display: none;
+  //display: none;
 }
 .ss-wrapper {
   overflow: hidden;

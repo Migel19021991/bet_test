@@ -266,7 +266,7 @@ var ssb = {
     }
 }
 window.onload = function() {
-    ssb.scrollbar('container');
+    // ssb.scrollbar('container');
     ssb.scrollbar('scrollSelect');
 }
 
