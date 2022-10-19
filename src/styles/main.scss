@@ -1,4 +1,18 @@
 $Blue_color: #42A9ED;
+$Light_blue_color: #3E9CDC;
+$White_color: #ffffff;
+$Navy_color: #3D4050;
+$Dark_blue_color: #3A3C4C;
+$Dark_blue2_color: #272733;
+$Border_blue: #286690;
+$Form_elements_bg: #DFDFE0;
+$Footer_gray_color: #C3C3C3;
+$Btn_hover: #6cb4e4;
+$Btn_active: #2487c8;
+$Btn_white-text_color: #2A2B30;
+$Btn_white-border_color: #6F6D7B;
+$Btn_white_hover: #eeeeee;
+$Btn_white_active: #d3d3d3;
 
 @import 'fonts/index';
 @import 'header/index';
@@ -15,9 +29,8 @@ body {
   font-weight: normal;
   font-style: normal;
   -ms-overflow-style: none;
-  //scrollbar-width: none;
 }
-.sectionMain {
+.section-main {
   background: url("../images/mainbg.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -30,12 +43,18 @@ body {
     padding-right: 15px;
     margin: 0 auto;
     padding-top: 190px;
+    padding-bottom: 200px;
     box-sizing: border-box;
     @media (max-width: 992px) {
       padding-top: 130px;
+      padding-bottom: 120px;
     }
     @media (max-width: 767px) {
       padding-top: 90px;
+      padding-bottom: 70px;
+    }
+    @media (max-width: 500px) {
+      padding-bottom: 50px;
     }
   }
 
@@ -64,7 +83,7 @@ body {
     }
   }
 }
-.textList {
+.text-list {
   @media (max-width: 992px) {
     width: 100%;
   }
@@ -103,18 +122,10 @@ body {
     margin-left: 10px;
   }
 }
-.sectionMain__btns {
+.section-main__btns {
   display: flex;
-  padding-bottom: 200px;
-  @media (max-width: 992px) {
-    padding-bottom: 120px;
-  }
-  @media (max-width: 767px) {
-    padding-bottom: 70px;
-  }
   @media (max-width: 500px) {
     flex-direction: column;
-    padding-bottom: 50px;
   }
 
   .btn:first-child {
@@ -125,8 +136,8 @@ body {
     }
   }
 }
-.sectionOrder {
-  background-color: #272733;
+.section-order {
+  background-color: $Dark_blue2_color;
   background-image: url('../images/orderbg.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -140,8 +151,10 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     padding-top: 120px;
+    padding-bottom: 150px;
     @media (max-width: 992px) {
       padding-top: 80px;
+      padding-bottom: 60px;
     }
     @media (max-width: 767px) {
       padding-top: 50px;
@@ -154,7 +167,7 @@ body {
     font-size: 36px;
     font-weight: 900;
     text-transform: uppercase;
-    color: white;
+    color: $White_color;
     margin-bottom: 30px;
     @media (max-width: 767px) {
       font-size: 28px;

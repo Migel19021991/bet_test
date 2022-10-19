@@ -1,12 +1,12 @@
 .btn {
   background: $Blue_color;
-  border: 1px solid #FFFFFF;
+  border: 1px solid $White_color;
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: $White_color;
   text-transform: uppercase;
   height: 43px;
   width: 183px;
@@ -17,9 +17,10 @@
     width: 100%;
   }
 
-  &__orderForm {
+  &_orderForm {
     max-width: 370px;
     width: 100%;
+    height: 48px;
     @media (max-width: 1210px) {
       max-width: 300px;
       width: 300px;
@@ -31,24 +32,24 @@
   }
 
   &:hover {
-    background-color: #6cb4e4;
+    background-color: $Btn_hover;
   }
 
   &:active {
-    background-color: #2487c8;
+    background-color: $Btn_active;
   }
 
   &_white {
-    background-color: white;
-    border-color: #6F6D7B;
-    color: #2A2B30;
+    background-color: $White_color;
+    border-color: $Btn_white-border_color;
+    color: $Btn_white-text_color;
 
     &:hover {
-      background-color: #eeeeee;
+      background-color: $Btn_white_hover;
     }
 
     &:active {
-      background-color: #d3d3d3;
+      background-color: $Btn_white_active;
     }
   }
 }

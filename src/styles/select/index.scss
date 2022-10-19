@@ -1,24 +1,24 @@
-.custom-select {
+.select__custom-select {
   position: relative;
   select {
     display: none;
   }
-  >.select-items.select-hide {
+  >.select__select-items.select__select-items_hide {
     display: none;
   }
 }
-.select-selected {
+.select__select-selected {
   background-color: transparent;
   height: 48px;
   box-sizing: border-box;
   border-radius: 3px;
-  border: 1px solid white;
-  background-color: #DFDFE0;
+  border: 1px solid $White_color;
+  background-color: $Form_elements_bg;
   display: flex;
   align-items: center;
   padding-left: 10px;
   font-size: 18px;
-  color: #272733;
+  color: $Dark_blue2_color;
   cursor: pointer;
   position: relative;
   transition: 0.3s;
@@ -33,57 +33,56 @@
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNOC45MzM3NiAxLjUxMDc3QzguOTMzNzYgMS40MzkzNCA4Ljg5ODA0IDEuMzU4OTggOC44NDQ0NyAxLjMwNTQxTDguMzk4MDQgMC44NTg5ODRDOC4zNDQ0NyAwLjgwNTQxMyA4LjI2NDExIDAuNzY5Njk5IDguMTkyNjggMC43Njk2OTlDOC4xMjEyNiAwLjc2OTY5OSA4LjA0MDkgMC44MDU0MTMgNy45ODczMyAwLjg1ODk4NEw0LjQ3ODQgNC4zNjc5MUwwLjk2OTQ2OSAwLjg1ODk4NEMwLjkxNTg5OCAwLjgwNTQxMyAwLjgzNTU0MSAwLjc2OTY5OSAwLjc2NDExMiAwLjc2OTY5OUMwLjY4Mzc1NSAwLjc2OTY5OSAwLjYxMjMyNyAwLjgwNTQxMyAwLjU1ODc1NSAwLjg1ODk4NEwwLjExMjMyNyAxLjMwNTQxQzAuMDU4NzU1MSAxLjM1ODk4IDAuMDIzMDQwOCAxLjQzOTM0IDAuMDIzMDQwOCAxLjUxMDc3QzAuMDIzMDQwOCAxLjU4MjIgMC4wNTg3NTUxIDEuNjYyNTYgMC4xMTIzMjcgMS43MTYxM0w0LjI3MzA0IDUuODc2ODRDNC4zMjY2MSA1LjkzMDQxIDQuNDA2OTcgNS45NjYxMyA0LjQ3ODQgNS45NjYxM0M0LjU0OTgzIDUuOTY2MTMgNC42MzAxOCA1LjkzMDQxIDQuNjgzNzYgNS44NzY4NEw4Ljg0NDQ3IDEuNzE2MTNDOC44OTgwNCAxLjY2MjU2IDguOTMzNzYgMS41ODIyIDguOTMzNzYgMS41MTA3N1oiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=");
   }
 }
-.select-selected.select-arrow-active {
+.select__select-selected.select__select-selected_active {
   border-radius: 4px 4px 0 0;
-  background-color: #3A3C4C;
-  color: white;
-  border-color: #3A3C4C;
+  background-color: $Dark_blue_color;
+  color: $White_color;
+  border-color: $Dark_blue_color;
   &:after {
     transform: rotate(0deg);
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNOC45MzM3OSA1LjM0ODUzQzguOTMzNzkgNS40MTk5NiA4Ljg5ODA3IDUuNTAwMzEgOC44NDQ1IDUuNTUzODlMOC4zOTgwNyA2LjAwMDMxQzguMzQ0NSA2LjA1Mzg5IDguMjY0MTQgNi4wODk2IDguMTkyNzEgNi4wODk2QzguMTIxMjkgNi4wODk2IDguMDQwOTMgNi4wNTM4OSA3Ljk4NzM2IDYuMDAwMzFMNC40Nzg0MyAyLjQ5MTM5TDAuOTY5NSA2LjAwMDMxQzAuOTE1OTI4IDYuMDUzODkgMC44MzU1NzEgNi4wODk2IDAuNzY0MTQzIDYuMDg5NkMwLjY4Mzc4NiA2LjA4OTYgMC42MTIzNTcgNi4wNTM4OSAwLjU1ODc4NiA2LjAwMDMxTDAuMTEyMzU3IDUuNTUzODlDMC4wNTg3ODU2IDUuNTAwMzEgMC4wMjMwNzEzIDUuNDE5OTYgMC4wMjMwNzEzIDUuMzQ4NTNDMC4wMjMwNzEzIDUuMjc3MSAwLjA1ODc4NTYgNS4xOTY3NCAwLjExMjM1NyA1LjE0MzE3TDQuMjczMDcgMC45ODI0NTdDNC4zMjY2NCAwLjkyODg4NSA0LjQwNyAwLjg5MzE3MSA0LjQ3ODQzIDAuODkzMTcxQzQuNTQ5ODYgMC44OTMxNzEgNC42MzAyMSAwLjkyODg4NSA0LjY4Mzc5IDAuOTgyNDU3TDguODQ0NSA1LjE0MzE3QzguODk4MDcgNS4xOTY3NCA4LjkzMzc5IDUuMjc3MSA4LjkzMzc5IDUuMzQ4NTNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K");
   }
 }
-.select-items.select-hide {
-  .select-items#scrollSelect {
+.select__select-items.select__select-items_hide {
+  .select__select-items#scrollSelect {
     display: block;
   }
-  .select-items.select-hide#scrollSelect {
+  .select__select-items.select__select-items_hide#scrollSelect {
     display: none;
   }
 }
-.select-items {
+.select__select-items {
   #optionElemContainer {
     >div {
-      color: #ffffff;
+      color: $White_color;
       cursor: pointer;
       height: 35px;
       align-items: center;
       font-size: 18px;
-      display: block;
-      margin: 0 10px;
+      display: flex;
       &:hover {
         border-radius: 3px;
         color: $Blue_color;
       }
     }
-    >div.same-as-selected {
+    >div.select__is-selected {
       border-radius: 3px;
       color: $Blue_color;
     }
   }
   position: absolute;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  box-sizing: border-box;
+  padding: 8px 10px 8px 10px;
   left: 0;
   right: 0;
   z-index: 99;
   border-radius: 0px 0px 4px 4px;
-  border: 1px solid #3A3C4C;
+  border: 1px solid $Dark_blue_color;
   border-top: none;
   height: 180px;
   overflow: auto;
   scrollbar-width: none;
-  background-color: #272733;
+  background-color: $Dark_blue2_color;
   div {
     &:hover {
       border-radius: 3px;
@@ -91,7 +90,16 @@
     }
   }
 }
-.same-as-selected {
+.select__is-selected {
   border-radius: 3px;
   color: $Blue_color;
+}
+
+
+.select__select-items .select__select-items#scrollSelect {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
 }
